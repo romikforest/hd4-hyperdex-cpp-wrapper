@@ -1,0 +1,80 @@
+# depslib dependency file v1.0
+1440523224 source:/home/romik/Документы/Уроки/Информатика/Тест/пробы/hd4/src/ltalloc.cc
+	<cassert>
+	<string>
+	<new>
+	<stdint.h>
+	<limits.h>
+	<limits.h>
+	<assert.h>
+	<string.h>
+	<windows.h>
+	<sys/mman.h>
+	<unistd.h>
+	<pthread.h>
+
+1446209319 source:/home/romik/Документы/Уроки/Информатика/Тест/пробы/hd4/src/main.cpp
+	<hyperdex_cpp/hyperdex.hpp>
+	"tests/test26.hpp"
+	<unistd.h>
+
+1441282722 /home/romik/Документы/Уроки/Информатика/Тест/пробы/hd4/src/version.h
+
+1440523224 source:/home/romik/Документы/Уроки/Информатика/Тест/пробы/hd4/src/common/ltalloc.cc
+	<cassert>
+	<string>
+	<new>
+	<stdint.h>
+	<limits.h>
+	<limits.h>
+	<assert.h>
+	<string.h>
+	<windows.h>
+	<sys/mman.h>
+	<unistd.h>
+	<pthread.h>
+
+1441281192 source:/home/romik/Документы/Уроки/Информатика/Тест/пробы/hd4/src/common/app_init.cpp
+
+1444396304 source:/home/romik/Документы/Уроки/Информатика/Тест/пробы/hd4/src/common/forest/forest.cpp
+	<forest/alternatives.hpp>
+	<forest/ltalloc/ltalloc.cc>
+	<forest/locale.hpp>
+
+1440523224 source:/home/romik/Документы/Уроки/Информатика/Тест/пробы/hd4/src/common/forest/ltalloc.cc
+	<cassert>
+	<string>
+	<new>
+	<stdint.h>
+	<limits.h>
+	<limits.h>
+	<assert.h>
+	<string.h>
+	<windows.h>
+	<sys/mman.h>
+	<unistd.h>
+	<pthread.h>
+
+1444624667 source:/home/romik/Документы/Уроки/Информатика/Тест/пробы/hd4/src/common/forest/ltalloc/ltalloc.cc
+	<cassert>
+	<string>
+	<new>
+	<stdint.h>
+	<limits.h>
+	<limits.h>
+	<assert.h>
+	<string.h>
+	<windows.h>
+	<sys/mman.h>
+	<unistd.h>
+	<pthread.h>
+
+1445065516 /home/romik/Документы/Уроки/Информатика/Тест/пробы/hd4/src/tests/test2.hpp
+	<iostream>
+	<string>
+	<hyperdex_cpp/hyperdex.hpp>
+
+1445685540 /home/romik/Документы/Уроки/Информатика/Тест/пробы/hd4/src/tests/test26.hpp
+	<iostream>
+	<hyperdex_cpp/hyperdex.hpp>
+

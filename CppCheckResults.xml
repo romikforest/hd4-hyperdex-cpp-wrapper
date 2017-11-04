@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<results>
+    <error file="src/common/forest/ltalloc.cc" line="379" id="variableScope" severity="style" msg="The scope of the variable &apos;small_size_classes&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:&#x0A;void f(int x)&#x0A;{&#x0A;    int i = 0;&#x0A;    if (x) {&#x0A;        // it&apos;s safe to move &apos;int i = 0;&apos; here&#x0A;        for (int n = 0; n &lt; 10; ++n) {&#x0A;            // it is possible but not safe to move &apos;int i = 0;&apos; here&#x0A;            do_something(&amp;i);&#x0A;        }&#x0A;    }&#x0A;}&#x0A;When you see this message it is always safe to reduce the variable scope 1 level." />
+    <error file="src/common/hyperdex_cpp/hyperdex_client_data.hpp" line="34" id="noConstructor" severity="style" msg="The class &apos;__client_answer&apos; does not have a constructor although it has private member variables. Member variables of builtin types are left uninitialized when the class is instanciated. That may cause bugs or undefined behavior." />
+    <error file="src/common/hyperdex_cpp/hyperdex_client_data.hpp" line="297" id="noConstructor" severity="style" msg="The class &apos;attributes&apos; does not have a constructor although it has private member variables. Member variables of builtin types are left uninitialized when the class is instanciated. That may cause bugs or undefined behavior." />
+    <error file="src/common/forest/ltalloc.cc" line="424" id="unusedFunction" severity="style" msg="The function &apos;fetch_from_central_cache&apos; is never used." />
+    <error file="src/common/hyperdex_cpp/hyperdex_client_data.hpp" line="47" id="unusedFunction" severity="style" msg="The function &apos;is_completed&apos; is never used." />
+    <error file="src/common/hyperdex_cpp/hyperdex_client_data.hpp" line="81" id="unusedFunction" severity="style" msg="The function &apos;is_connection_error&apos; is never used." />
+    <error file="src/common/hyperdex_cpp/hyperdex_client_data.hpp" line="74" id="unusedFunction" severity="style" msg="The function &apos;is_critical_error&apos; is never used." />
+    <error file="src/common/hyperdex_cpp/hyperdex_client_data.hpp" line="89" id="unusedFunction" severity="style" msg="The function &apos;is_database_structure_error&apos; is never used." />
+    <error file="src/common/hyperdex_cpp/hyperdex_client_data.hpp" line="69" id="unusedFunction" severity="style" msg="The function &apos;is_error&apos; is never used." />
+    <error file="src/common/hyperdex_cpp/hyperdex_client_data.hpp" line="50" id="unusedFunction" severity="style" msg="The function &apos;is_last_op&apos; is never used." />
+    <error file="src/common/hyperdex_cpp/hyperdex_client_data.hpp" line="54" id="unusedFunction" severity="style" msg="The function &apos;is_locked&apos; is never used." />
+    <error file="src/common/hyperdex_cpp/hyperdex_client_data.hpp" line="97" id="unusedFunction" severity="style" msg="The function &apos;is_program_error&apos; is never used." />
+    <error file="src/common/hyperdex_cpp/hyperdex_client_data.hpp" line="115" id="unusedFunction" severity="style" msg="The function &apos;is_search_done&apos; is never used." />
+    <error file="src/common/hyperdex_cpp/hyperdex_client_data.hpp" line="248" id="unusedFunction" severity="style" msg="The function &apos;is_unauthorized&apos; is never used." />
+    <error file="src/common/hyperdex_cpp/hyperdex_common.hpp" line="87" id="unusedFunction" severity="style" msg="The function &apos;log_ds_status&apos; is never used." />
+    <error file="src/common/forest/ltalloc.cc" line="624" id="unusedFunction" severity="style" msg="The function &apos;ltalloc&apos; is never used." />
+    <error file="src/common/forest/ltalloc.cc" line="750" id="unusedFunction" severity="style" msg="The function &apos;ltalloc_squeeze&apos; is never used." />
+    <error file="src/common/forest/ltalloc.cc" line="698" id="unusedFunction" severity="style" msg="The function &apos;ltalloc_usable_size&apos; is never used." />
+    <error file="src/common/forest/ltalloc.cc" line="311" id="unusedFunction" severity="style" msg="The function &apos;on_tls_callback&apos; is never used." />
+    <error file="src/common/hyperdex_cpp/hyperdex_client_data.hpp" line="43" id="unusedFunction" severity="style" msg="The function &apos;op_id&apos; is never used." />
+    <error file="src/common/hyperdex_cpp/hyperdex_client_data.hpp" line="45" id="unusedFunction" severity="style" msg="The function &apos;op_status&apos; is never used." />
+    <error file="src/common/forest/ext_optional.hpp" line="81" id="unusedFunction" severity="style" msg="The function &apos;operatorbool&apos; is never used." />
+    <error file="src/common/forest/ltalloc.cc" line="920" id="unusedFunction" severity="style" msg="The function &apos;operatordelete&apos; is never used." />
+    <error file="src/common/forest/ltalloc.cc" line="922" id="unusedFunction" severity="style" msg="The function &apos;operatordelete[]&apos; is never used." />
+    <error file="src/common/forest/ltalloc.cc" line="915" id="unusedFunction" severity="style" msg="The function &apos;operatornew&apos; is never used." />
+    <error file="src/common/forest/ltalloc.cc" line="917" id="unusedFunction" severity="style" msg="The function &apos;operatornew[]&apos; is never used." />
+    <error file="src/common/hyperdex_cpp/hyperdex_client_data.hpp" line="52" id="unusedFunction" severity="style" msg="The function &apos;phase&apos; is never used." />
+    <error file="src/common/hyperdex_cpp/hyperdex_client_data.hpp" line="56" id="unusedFunction" severity="style" msg="The function &apos;was_operations&apos; is never used." />
+    <error id="missingInclude" severity="style" msg="Cppcheck cannot find all the include files. Cppcheck can check the code without the include files found. But the results will probably be more accurate if all the include files are found. Please check your project&apos;s include directories and add all of them as include directories for Cppcheck. To see what files Cppcheck cannot find use --check-config." />
+</results>

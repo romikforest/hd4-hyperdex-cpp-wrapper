@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="HyperDex c++ wrapper" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option extended_obj_names="1" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/hyperdex_test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Weffc++" />
+					<Add option="-Wextra" />
+					<Add option="-Wall" />
+					<Add option="-pg" />
+					<Add option="-g" />
+					<Add option="-Wno-sized-deallocation" />
+				</Compiler>
+				<Linker>
+					<Add option="-pg" />
+					<Add option="-g" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/hyperdex_test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="-DNDEBUG" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Prof">
+				<Option output="bin/Prof/hyperdex_test" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Prof/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="-pg" />
+				</Compiler>
+				<Linker>
+					<Add option="-pg" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add option="-std=gnu++14" />
+			<Add option="-flto" />
+			<Add option="-fno-builtin-malloc" />
+			<Add option="-fno-builtin-free" />
+			<Add option="-Isrc/common" />
+			<Add option="-DBOOST_ALL_DYN_LINK" />
+		</Compiler>
+		<Linker>
+			<Add option="-lmacaroons" />
+			<Add option="-lboost_serialization" />
+			<Add option="-lboost_log" />
+			<Add option="-lboost_log_setup" />
+			<Add option="-lboost_thread" />
+			<Add option="-lpthread" />
+			<Add option="-lhyperdex-client" />
+			<Add option="-lhyperdex-admin" />
+			<Add option="-flto" />
+			<Add option="-fno-builtin-malloc" />
+			<Add option="-fno-builtin-free" />
+		</Linker>
+		<Unit filename="src/common/forest/alternatives.hpp" />
+		<Unit filename="src/common/forest/alternatives_values.hpp" />
+		<Unit filename="src/common/forest/app_info.hpp" />
+		<Unit filename="src/common/forest/array.hpp" />
+		<Unit filename="src/common/forest/convert.hpp" />
+		<Unit filename="src/common/forest/date.h" />
+		<Unit filename="src/common/forest/date.hpp" />
+		<Unit filename="src/common/forest/endian.hpp" />
+		<Unit filename="src/common/forest/expected.hpp" />
+		<Unit filename="src/common/forest/ext_optional.hpp" />
+		<Unit filename="src/common/forest/forest.cpp" />
+		<Unit filename="src/common/forest/forest.hpp" />
+		<Unit filename="src/common/forest/int128.hpp" />
+		<Unit filename="src/common/forest/locale.hpp" />
+		<Unit filename="src/common/forest/log.hpp" />
+		<Unit filename="src/common/forest/map.hpp" />
+		<Unit filename="src/common/forest/move.hpp" />
+		<Unit filename="src/common/forest/multimap.hpp" />
+		<Unit filename="src/common/forest/multiset.hpp" />
+		<Unit filename="src/common/forest/optional.hpp" />
+		<Unit filename="src/common/forest/rsu.hpp" />
+		<Unit filename="src/common/forest/serialization.hpp" />
+		<Unit filename="src/common/forest/set.hpp" />
+		<Unit filename="src/common/forest/shared_ptr.hpp" />
+		<Unit filename="src/common/forest/string.hpp" />
+		<Unit filename="src/common/forest/tools.hpp" />
+		<Unit filename="src/common/forest/tuple.hpp" />
+		<Unit filename="src/common/forest/type_names.hpp" />
+		<Unit filename="src/common/forest/unique_ptr.hpp" />
+		<Unit filename="src/common/forest/unordered_map.hpp" />
+		<Unit filename="src/common/forest/unordered_set.hpp" />
+		<Unit filename="src/common/forest/vector.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/admin.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/admin_answer.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/attribute_status.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/attributes.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/base_types.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/c_string_traits.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/client.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/client_answer.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/common.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/conversions.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/data_traits.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/document.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/fill_names.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/hyperdex.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/iterators_and_traits.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/linear_search.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/list.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/log.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/macaroons.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/map.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/map_attributes.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/map_traits.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/output.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/predicates.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/serializer.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/set.hpp" />
+		<Unit filename="src/common/hyperdex_cpp/timestamp.hpp" />
+		<Unit filename="src/common/macaroons/base64.h" />
+		<Unit filename="src/common/macaroons/constants.h" />
+		<Unit filename="src/common/macaroons/custom-config.h" />
+		<Unit filename="src/common/macaroons/macaroons.h" />
+		<Unit filename="src/common/macaroons/packet.h" />
+		<Unit filename="src/common/macaroons/port.h" />
+		<Unit filename="src/main.cpp" />
+		<Unit filename="src/tests/test1.hpp" />
+		<Unit filename="src/tests/test10.hpp" />
+		<Unit filename="src/tests/test11.hpp" />
+		<Unit filename="src/tests/test12.hpp" />
+		<Unit filename="src/tests/test13.hpp" />
+		<Unit filename="src/tests/test14.hpp" />
+		<Unit filename="src/tests/test15.hpp" />
+		<Unit filename="src/tests/test16.hpp" />
+		<Unit filename="src/tests/test17.hpp" />
+		<Unit filename="src/tests/test18.hpp" />
+		<Unit filename="src/tests/test19.hpp" />
+		<Unit filename="src/tests/test2.hpp" />
+		<Unit filename="src/tests/test20.hpp" />
+		<Unit filename="src/tests/test21.hpp" />
+		<Unit filename="src/tests/test22.hpp" />
+		<Unit filename="src/tests/test23.hpp" />
+		<Unit filename="src/tests/test24.hpp" />
+		<Unit filename="src/tests/test25.hpp" />
+		<Unit filename="src/tests/test26.hpp" />
+		<Unit filename="src/tests/test27.hpp" />
+		<Unit filename="src/tests/test28.hpp" />
+		<Unit filename="src/tests/test29.hpp" />
+		<Unit filename="src/tests/test3.hpp" />
+		<Unit filename="src/tests/test30.hpp" />
+		<Unit filename="src/tests/test31.hpp" />
+		<Unit filename="src/tests/test4.hpp" />
+		<Unit filename="src/tests/test5.hpp" />
+		<Unit filename="src/tests/test6.hpp" />
+		<Unit filename="src/tests/test7.hpp" />
+		<Unit filename="src/tests/test8.hpp" />
+		<Unit filename="src/tests/test9.hpp" />
+		<Unit filename="src/version.h" />
+		<Extensions>
+			<code_completion>
+				<search_path add="src" />
+				<search_path add="src/common" />
+			</code_completion>
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+			<DoxyBlocks>
+				<comment_style block="5" line="2" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+			<AutoVersioning>
+				<Scheme minor_max="10" build_max="0" rev_max="0" rev_rand_max="10" build_times_to_increment_minor="100" />
+				<Settings autoincrement="1" date_declarations="1" use_define="0" update_manifest="1" do_auto_increment="0" ask_to_increment="0" language="C++" svn="0" svn_directory="" header_path="src/version.h" />
+				<Changes_Log show_changes_editor="1" app_title="released version %M.%m.%b of %p" changeslog_path="ChangesLog.txt" />
+				<Code header_guard="VERSION_H_ICLUDED" namespace="AutoVersion" prefix="" />
+			</AutoVersioning>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

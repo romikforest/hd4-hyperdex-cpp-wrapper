@@ -1,0 +1,1886 @@
+<?xml version="1.0"?>
+
+<valgrindoutput>
+
+<protocolversion>4</protocolversion>
+<protocoltool>memcheck</protocoltool>
+
+<preamble>
+  <line>Memcheck, a memory error detector</line>
+  <line>Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.</line>
+  <line>Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info</line>
+  <line>Command: /home/romik/Документы/Уроки/Информатика/Тест/пробы/hd4/bin/Debug/hiperdex_test  --pΰ</line>
+</preamble>
+
+<pid>22387</pid>
+<ppid>32221</ppid>
+<tool>memcheck</tool>
+
+<args>
+  <vargv>
+    <exe>/usr/bin/valgrind.bin</exe>
+    <arg>--leak-check=full</arg>
+    <arg>--track-origins=yes</arg>
+    <arg>--xml=yes</arg>
+    <arg>--xml-file=/home/romik/Документы/Уроки/Информатика/Тест/пробы/hd4/ValgrindOut.xml</arg>
+  </vargv>
+  <argv>
+    <exe>/home/romik/Документы/Уроки/Информатика/Тест/пробы/hd4/bin/Debug/hiperdex_test</exe>
+    <arg></arg>
+    <arg>--pΰ</arg>
+  </argv>
+</args>
+
+<status>
+  <state>RUNNING</state>
+  <time>00:00:00:00.680 </time>
+</status>
+
+
+<status>
+  <state>FINISHED</state>
+  <time>00:00:00:06.915 </time>
+</status>
+
+<error>
+  <unique>0x3e</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>48 bytes in 1 blocks are possibly lost in loss record 63 of 184</text>
+    <leakedbytes>48</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2AB80</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x9B2DAE7</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnicodeString::copyFrom(icu_55::UnicodeString const&amp;, signed char)</fn>
+    </frame>
+    <frame>
+      <ip>0x970BEB2</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::toPattern(icu_55::UnicodeString&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x5CA8CF9</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_locale.so.1.59.0</obj>
+      <fn>boost::locale::impl_icu::icu_formatters_cache::icu_formatters_cache(icu_55::Locale const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x5C982BB</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_locale.so.1.59.0</obj>
+      <fn>boost::locale::impl_icu::create_formatting(std::locale const&amp;, boost::locale::impl_icu::cdata const&amp;, unsigned int)</fn>
+    </frame>
+    <frame>
+      <ip>0x5C96D36</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_locale.so.1.59.0</obj>
+      <fn>boost::locale::impl_icu::icu_localization_backend::install(std::locale const&amp;, unsigned int, unsigned int)</fn>
+    </frame>
+    <frame>
+      <ip>0x5C60594</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_locale.so.1.59.0</obj>
+      <fn>boost::locale::localization_backend_manager::impl::actual_backend::install(std::locale const&amp;, unsigned int, unsigned int)</fn>
+    </frame>
+    <frame>
+      <ip>0x5C5C39A</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_locale.so.1.59.0</obj>
+      <fn>boost::locale::generator::generate(std::locale const&amp;, std::string const&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x5C5CB66</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_locale.so.1.59.0</obj>
+      <fn>boost::locale::generator::generate(std::string const&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x41BB95</ip>
+      <obj>/home/romik/Документы/Уроки/Информатика/Тест/пробы/hd4/bin/Debug/hiperdex_test</obj>
+      <fn>boost::locale::generator::operator()(std::string const&amp;) const</fn>
+      <dir>/usr/include/boost/locale</dir>
+      <file>generator.hpp</file>
+      <line>202</line>
+    </frame>
+    <frame>
+      <ip>0x41BBF1</ip>
+      <obj>/home/romik/Документы/Уроки/Информатика/Тест/пробы/hd4/bin/Debug/hiperdex_test</obj>
+      <fn>(anonymous namespace)::ForestApp::ForestApp()</fn>
+      <dir>/home/romik/Документы/Уроки/Информатика/Тест/пробы/hd4/src/common/forest</dir>
+      <file>forest.cpp</file>
+      <line>38</line>
+    </frame>
+    <frame>
+      <ip>0x41BCFC</ip>
+      <obj>/home/romik/Документы/Уроки/Информатика/Тест/пробы/hd4/bin/Debug/hiperdex_test</obj>
+      <fn>__static_initialization_and_destruction_0(int, int)</fn>
+      <dir>/home/romik/Документы/Уроки/Информатика/Тест/пробы/hd4/src/common/forest</dir>
+      <file>forest.cpp</file>
+      <line>45</line>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x6a</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>88 bytes in 1 blocks are possibly lost in loss record 107 of 184</text>
+    <leakedbytes>88</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2AB80</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x9AE25D5</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UMemory::operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x9717B07</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::initField(icu_55::UnicodeString**, int&amp;, UResourceBundle const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970FA3C</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::initializeData(icu_55::Locale const&amp;, char const*, UErrorCode&amp;, signed char)</fn>
+    </frame>
+    <frame>
+      <ip>0x97126DD</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::DateFormatSymbols(icu_55::Locale const&amp;, char const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E605</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::LocaleCacheKey&lt;icu_55::SharedDateFormatSymbols&gt;::createObject(void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9B984E7</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnifiedCache::_get(icu_55::CacheKeyBase const&amp;, icu_55::SharedObject const*&amp;, void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717E57</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::get&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::CacheKey&lt;icu_55::SharedDateFormatSymbols&gt; const&amp;, void const*, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717C36</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::getByLocale&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::Locale const&amp;, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E6A1</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::createForLocale(icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970114E</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::construct(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x9703121</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::SimpleDateFormat(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x6b</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>88 bytes in 1 blocks are possibly lost in loss record 108 of 184</text>
+    <leakedbytes>88</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2AB80</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x9AE25D5</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UMemory::operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x9717B07</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::initField(icu_55::UnicodeString**, int&amp;, UResourceBundle const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970FA61</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::initializeData(icu_55::Locale const&amp;, char const*, UErrorCode&amp;, signed char)</fn>
+    </frame>
+    <frame>
+      <ip>0x97126DD</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::DateFormatSymbols(icu_55::Locale const&amp;, char const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E605</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::LocaleCacheKey&lt;icu_55::SharedDateFormatSymbols&gt;::createObject(void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9B984E7</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnifiedCache::_get(icu_55::CacheKeyBase const&amp;, icu_55::SharedObject const*&amp;, void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717E57</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::get&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::CacheKey&lt;icu_55::SharedDateFormatSymbols&gt; const&amp;, void const*, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717C36</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::getByLocale&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::Locale const&amp;, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E6A1</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::createForLocale(icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970114E</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::construct(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x9703121</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::SimpleDateFormat(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x6c</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>88 bytes in 1 blocks are possibly lost in loss record 109 of 184</text>
+    <leakedbytes>88</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2AB80</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x9AE25D5</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UMemory::operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x9717B07</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::initField(icu_55::UnicodeString**, int&amp;, UResourceBundle const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970FA83</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::initializeData(icu_55::Locale const&amp;, char const*, UErrorCode&amp;, signed char)</fn>
+    </frame>
+    <frame>
+      <ip>0x97126DD</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::DateFormatSymbols(icu_55::Locale const&amp;, char const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E605</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::LocaleCacheKey&lt;icu_55::SharedDateFormatSymbols&gt;::createObject(void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9B984E7</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnifiedCache::_get(icu_55::CacheKeyBase const&amp;, icu_55::SharedObject const*&amp;, void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717E57</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::get&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::CacheKey&lt;icu_55::SharedDateFormatSymbols&gt; const&amp;, void const*, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717C36</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::getByLocale&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::Locale const&amp;, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E6A1</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::createForLocale(icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970114E</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::construct(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x9703121</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::SimpleDateFormat(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x6d</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>88 bytes in 1 blocks are possibly lost in loss record 110 of 184</text>
+    <leakedbytes>88</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2AB80</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x9AE25D5</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UMemory::operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x9717B07</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::initField(icu_55::UnicodeString**, int&amp;, UResourceBundle const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970FE68</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::initializeData(icu_55::Locale const&amp;, char const*, UErrorCode&amp;, signed char)</fn>
+    </frame>
+    <frame>
+      <ip>0x97126DD</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::DateFormatSymbols(icu_55::Locale const&amp;, char const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E605</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::LocaleCacheKey&lt;icu_55::SharedDateFormatSymbols&gt;::createObject(void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9B984E7</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnifiedCache::_get(icu_55::CacheKeyBase const&amp;, icu_55::SharedObject const*&amp;, void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717E57</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::get&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::CacheKey&lt;icu_55::SharedDateFormatSymbols&gt; const&amp;, void const*, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717C36</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::getByLocale&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::Locale const&amp;, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E6A1</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::createForLocale(icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970114E</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::construct(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x9703121</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::SimpleDateFormat(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x6e</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>88 bytes in 1 blocks are possibly lost in loss record 111 of 184</text>
+    <leakedbytes>88</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2AB80</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x9AE25D5</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UMemory::operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x9717B07</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::initField(icu_55::UnicodeString**, int&amp;, UResourceBundle const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970FE9E</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::initializeData(icu_55::Locale const&amp;, char const*, UErrorCode&amp;, signed char)</fn>
+    </frame>
+    <frame>
+      <ip>0x97126DD</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::DateFormatSymbols(icu_55::Locale const&amp;, char const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E605</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::LocaleCacheKey&lt;icu_55::SharedDateFormatSymbols&gt;::createObject(void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9B984E7</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnifiedCache::_get(icu_55::CacheKeyBase const&amp;, icu_55::SharedObject const*&amp;, void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717E57</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::get&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::CacheKey&lt;icu_55::SharedDateFormatSymbols&gt; const&amp;, void const*, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717C36</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::getByLocale&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::Locale const&amp;, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E6A1</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::createForLocale(icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970114E</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::construct(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x9703121</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::SimpleDateFormat(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x85</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>168 bytes in 1 blocks are possibly lost in loss record 134 of 184</text>
+    <leakedbytes>168</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2AB80</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x9AE25D5</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UMemory::operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x9717B07</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::initField(icu_55::UnicodeString**, int&amp;, UResourceBundle const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970FEDB</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::initializeData(icu_55::Locale const&amp;, char const*, UErrorCode&amp;, signed char)</fn>
+    </frame>
+    <frame>
+      <ip>0x97126DD</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::DateFormatSymbols(icu_55::Locale const&amp;, char const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E605</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::LocaleCacheKey&lt;icu_55::SharedDateFormatSymbols&gt;::createObject(void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9B984E7</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnifiedCache::_get(icu_55::CacheKeyBase const&amp;, icu_55::SharedObject const*&amp;, void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717E57</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::get&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::CacheKey&lt;icu_55::SharedDateFormatSymbols&gt; const&amp;, void const*, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717C36</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::getByLocale&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::Locale const&amp;, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E6A1</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::createForLocale(icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970114E</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::construct(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x9703121</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::SimpleDateFormat(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x86</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>168 bytes in 1 blocks are possibly lost in loss record 135 of 184</text>
+    <leakedbytes>168</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2AB80</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x9AE25D5</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UMemory::operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x9717B07</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::initField(icu_55::UnicodeString**, int&amp;, UResourceBundle const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970FF18</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::initializeData(icu_55::Locale const&amp;, char const*, UErrorCode&amp;, signed char)</fn>
+    </frame>
+    <frame>
+      <ip>0x97126DD</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::DateFormatSymbols(icu_55::Locale const&amp;, char const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E605</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::LocaleCacheKey&lt;icu_55::SharedDateFormatSymbols&gt;::createObject(void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9B984E7</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnifiedCache::_get(icu_55::CacheKeyBase const&amp;, icu_55::SharedObject const*&amp;, void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717E57</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::get&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::CacheKey&lt;icu_55::SharedDateFormatSymbols&gt; const&amp;, void const*, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717C36</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::getByLocale&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::Locale const&amp;, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E6A1</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::createForLocale(icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970114E</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::construct(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x9703121</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::SimpleDateFormat(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x87</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>168 bytes in 1 blocks are possibly lost in loss record 136 of 184</text>
+    <leakedbytes>168</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2AB80</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x9AE25D5</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UMemory::operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x9717B07</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::initField(icu_55::UnicodeString**, int&amp;, UResourceBundle const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970FF5D</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::initializeData(icu_55::Locale const&amp;, char const*, UErrorCode&amp;, signed char)</fn>
+    </frame>
+    <frame>
+      <ip>0x97126DD</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::DateFormatSymbols(icu_55::Locale const&amp;, char const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E605</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::LocaleCacheKey&lt;icu_55::SharedDateFormatSymbols&gt;::createObject(void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9B984E7</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnifiedCache::_get(icu_55::CacheKeyBase const&amp;, icu_55::SharedObject const*&amp;, void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717E57</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::get&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::CacheKey&lt;icu_55::SharedDateFormatSymbols&gt; const&amp;, void const*, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717C36</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::getByLocale&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::Locale const&amp;, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E6A1</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::createForLocale(icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970114E</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::construct(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x9703121</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::SimpleDateFormat(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x88</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>168 bytes in 1 blocks are possibly lost in loss record 137 of 184</text>
+    <leakedbytes>168</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2AB80</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x9AE25D5</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UMemory::operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x9717B07</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::initField(icu_55::UnicodeString**, int&amp;, UResourceBundle const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970FFEE</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::initializeData(icu_55::Locale const&amp;, char const*, UErrorCode&amp;, signed char)</fn>
+    </frame>
+    <frame>
+      <ip>0x97126DD</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::DateFormatSymbols(icu_55::Locale const&amp;, char const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E605</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::LocaleCacheKey&lt;icu_55::SharedDateFormatSymbols&gt;::createObject(void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9B984E7</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnifiedCache::_get(icu_55::CacheKeyBase const&amp;, icu_55::SharedObject const*&amp;, void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717E57</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::get&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::CacheKey&lt;icu_55::SharedDateFormatSymbols&gt; const&amp;, void const*, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717C36</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::getByLocale&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::Locale const&amp;, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E6A1</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::createForLocale(icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970114E</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::construct(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x9703121</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::SimpleDateFormat(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x90</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>328 bytes in 1 blocks are possibly lost in loss record 145 of 184</text>
+    <leakedbytes>328</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2AB80</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x9AE25D5</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UMemory::operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x97100B8</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::initializeData(icu_55::Locale const&amp;, char const*, UErrorCode&amp;, signed char)</fn>
+    </frame>
+    <frame>
+      <ip>0x97126DD</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::DateFormatSymbols(icu_55::Locale const&amp;, char const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E605</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::LocaleCacheKey&lt;icu_55::SharedDateFormatSymbols&gt;::createObject(void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9B984E7</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnifiedCache::_get(icu_55::CacheKeyBase const&amp;, icu_55::SharedObject const*&amp;, void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717E57</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::get&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::CacheKey&lt;icu_55::SharedDateFormatSymbols&gt; const&amp;, void const*, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717C36</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::getByLocale&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::Locale const&amp;, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E6A1</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::createForLocale(icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970114E</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::construct(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x9703121</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::SimpleDateFormat(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970055F</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormat::create(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x91</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>328 bytes in 1 blocks are possibly lost in loss record 146 of 184</text>
+    <leakedbytes>328</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2AB80</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x9AE25D5</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UMemory::operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x9710343</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::initializeData(icu_55::Locale const&amp;, char const*, UErrorCode&amp;, signed char)</fn>
+    </frame>
+    <frame>
+      <ip>0x97126DD</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::DateFormatSymbols(icu_55::Locale const&amp;, char const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E605</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::LocaleCacheKey&lt;icu_55::SharedDateFormatSymbols&gt;::createObject(void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9B984E7</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnifiedCache::_get(icu_55::CacheKeyBase const&amp;, icu_55::SharedObject const*&amp;, void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717E57</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::get&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::CacheKey&lt;icu_55::SharedDateFormatSymbols&gt; const&amp;, void const*, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717C36</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::getByLocale&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::Locale const&amp;, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E6A1</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::createForLocale(icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970114E</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::construct(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x9703121</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::SimpleDateFormat(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970055F</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormat::create(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x92</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>328 bytes in 1 blocks are possibly lost in loss record 147 of 184</text>
+    <leakedbytes>328</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2AB80</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x9AE25D5</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UMemory::operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x97104A7</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::initializeData(icu_55::Locale const&amp;, char const*, UErrorCode&amp;, signed char)</fn>
+    </frame>
+    <frame>
+      <ip>0x97126DD</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::DateFormatSymbols(icu_55::Locale const&amp;, char const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E605</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::LocaleCacheKey&lt;icu_55::SharedDateFormatSymbols&gt;::createObject(void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9B984E7</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnifiedCache::_get(icu_55::CacheKeyBase const&amp;, icu_55::SharedObject const*&amp;, void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717E57</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::get&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::CacheKey&lt;icu_55::SharedDateFormatSymbols&gt; const&amp;, void const*, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717C36</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::getByLocale&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::Locale const&amp;, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E6A1</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::createForLocale(icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970114E</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::construct(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x9703121</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::SimpleDateFormat(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970055F</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormat::create(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x93</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>328 bytes in 1 blocks are possibly lost in loss record 148 of 184</text>
+    <leakedbytes>328</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2AB80</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x9AE25D5</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UMemory::operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x9710643</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::initializeData(icu_55::Locale const&amp;, char const*, UErrorCode&amp;, signed char)</fn>
+    </frame>
+    <frame>
+      <ip>0x97126DD</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::DateFormatSymbols(icu_55::Locale const&amp;, char const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E605</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::LocaleCacheKey&lt;icu_55::SharedDateFormatSymbols&gt;::createObject(void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9B984E7</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnifiedCache::_get(icu_55::CacheKeyBase const&amp;, icu_55::SharedObject const*&amp;, void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717E57</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::get&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::CacheKey&lt;icu_55::SharedDateFormatSymbols&gt; const&amp;, void const*, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717C36</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::getByLocale&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::Locale const&amp;, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E6A1</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::createForLocale(icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970114E</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::construct(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x9703121</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::SimpleDateFormat(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970055F</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormat::create(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x94</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>328 bytes in 1 blocks are possibly lost in loss record 149 of 184</text>
+    <leakedbytes>328</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2AB80</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x9AE25D5</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UMemory::operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x9710905</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::initializeData(icu_55::Locale const&amp;, char const*, UErrorCode&amp;, signed char)</fn>
+    </frame>
+    <frame>
+      <ip>0x97126DD</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::DateFormatSymbols(icu_55::Locale const&amp;, char const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E605</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::LocaleCacheKey&lt;icu_55::SharedDateFormatSymbols&gt;::createObject(void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9B984E7</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnifiedCache::_get(icu_55::CacheKeyBase const&amp;, icu_55::SharedObject const*&amp;, void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717E57</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::get&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::CacheKey&lt;icu_55::SharedDateFormatSymbols&gt; const&amp;, void const*, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717C36</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::getByLocale&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::Locale const&amp;, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E6A1</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::createForLocale(icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970114E</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::construct(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x9703121</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::SimpleDateFormat(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970055F</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormat::create(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x95</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>328 bytes in 1 blocks are possibly lost in loss record 150 of 184</text>
+    <leakedbytes>328</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2AB80</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x9AE25D5</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UMemory::operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x9710A6F</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::initializeData(icu_55::Locale const&amp;, char const*, UErrorCode&amp;, signed char)</fn>
+    </frame>
+    <frame>
+      <ip>0x97126DD</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::DateFormatSymbols(icu_55::Locale const&amp;, char const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E605</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::LocaleCacheKey&lt;icu_55::SharedDateFormatSymbols&gt;::createObject(void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9B984E7</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnifiedCache::_get(icu_55::CacheKeyBase const&amp;, icu_55::SharedObject const*&amp;, void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717E57</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::get&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::CacheKey&lt;icu_55::SharedDateFormatSymbols&gt; const&amp;, void const*, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717C36</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::getByLocale&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::Locale const&amp;, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E6A1</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::createForLocale(icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970114E</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::construct(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x9703121</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::SimpleDateFormat(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970055F</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormat::create(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x96</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>328 bytes in 1 blocks are possibly lost in loss record 151 of 184</text>
+    <leakedbytes>328</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2AB80</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x9AE25D5</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UMemory::operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x9710BE2</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::initializeData(icu_55::Locale const&amp;, char const*, UErrorCode&amp;, signed char)</fn>
+    </frame>
+    <frame>
+      <ip>0x97126DD</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::DateFormatSymbols(icu_55::Locale const&amp;, char const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E605</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::LocaleCacheKey&lt;icu_55::SharedDateFormatSymbols&gt;::createObject(void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9B984E7</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnifiedCache::_get(icu_55::CacheKeyBase const&amp;, icu_55::SharedObject const*&amp;, void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717E57</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::get&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::CacheKey&lt;icu_55::SharedDateFormatSymbols&gt; const&amp;, void const*, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717C36</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::getByLocale&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::Locale const&amp;, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E6A1</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::createForLocale(icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970114E</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::construct(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x9703121</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::SimpleDateFormat(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970055F</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormat::create(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x97</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>328 bytes in 1 blocks are possibly lost in loss record 152 of 184</text>
+    <leakedbytes>328</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2AB80</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x9AE25D5</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UMemory::operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x9710D83</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::initializeData(icu_55::Locale const&amp;, char const*, UErrorCode&amp;, signed char)</fn>
+    </frame>
+    <frame>
+      <ip>0x97126DD</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::DateFormatSymbols(icu_55::Locale const&amp;, char const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E605</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::LocaleCacheKey&lt;icu_55::SharedDateFormatSymbols&gt;::createObject(void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9B984E7</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnifiedCache::_get(icu_55::CacheKeyBase const&amp;, icu_55::SharedObject const*&amp;, void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717E57</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::get&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::CacheKey&lt;icu_55::SharedDateFormatSymbols&gt; const&amp;, void const*, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717C36</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::getByLocale&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::Locale const&amp;, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E6A1</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::createForLocale(icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970114E</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::construct(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x9703121</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::SimpleDateFormat(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970055F</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormat::create(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x98</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>488 bytes in 1 blocks are possibly lost in loss record 153 of 184</text>
+    <leakedbytes>488</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2AB80</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x9AE25D5</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UMemory::operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x9717B07</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::initField(icu_55::UnicodeString**, int&amp;, UResourceBundle const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970FAC0</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::initializeData(icu_55::Locale const&amp;, char const*, UErrorCode&amp;, signed char)</fn>
+    </frame>
+    <frame>
+      <ip>0x97126DD</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::DateFormatSymbols(icu_55::Locale const&amp;, char const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E605</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::LocaleCacheKey&lt;icu_55::SharedDateFormatSymbols&gt;::createObject(void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9B984E7</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnifiedCache::_get(icu_55::CacheKeyBase const&amp;, icu_55::SharedObject const*&amp;, void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717E57</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::get&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::CacheKey&lt;icu_55::SharedDateFormatSymbols&gt; const&amp;, void const*, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717C36</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::getByLocale&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::Locale const&amp;, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E6A1</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::createForLocale(icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970114E</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::construct(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x9703121</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::SimpleDateFormat(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x99</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>488 bytes in 1 blocks are possibly lost in loss record 154 of 184</text>
+    <leakedbytes>488</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2AB80</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x9AE25D5</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UMemory::operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x9717B07</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::initField(icu_55::UnicodeString**, int&amp;, UResourceBundle const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970FAFD</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::initializeData(icu_55::Locale const&amp;, char const*, UErrorCode&amp;, signed char)</fn>
+    </frame>
+    <frame>
+      <ip>0x97126DD</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::DateFormatSymbols(icu_55::Locale const&amp;, char const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E605</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::LocaleCacheKey&lt;icu_55::SharedDateFormatSymbols&gt;::createObject(void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9B984E7</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnifiedCache::_get(icu_55::CacheKeyBase const&amp;, icu_55::SharedObject const*&amp;, void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717E57</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::get&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::CacheKey&lt;icu_55::SharedDateFormatSymbols&gt; const&amp;, void const*, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717C36</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::getByLocale&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::Locale const&amp;, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E6A1</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::createForLocale(icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970114E</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::construct(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x9703121</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::SimpleDateFormat(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x9a</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>488 bytes in 1 blocks are possibly lost in loss record 155 of 184</text>
+    <leakedbytes>488</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2AB80</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x9AE25D5</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UMemory::operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x9717B07</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::initField(icu_55::UnicodeString**, int&amp;, UResourceBundle const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970FB40</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::initializeData(icu_55::Locale const&amp;, char const*, UErrorCode&amp;, signed char)</fn>
+    </frame>
+    <frame>
+      <ip>0x97126DD</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::DateFormatSymbols(icu_55::Locale const&amp;, char const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E605</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::LocaleCacheKey&lt;icu_55::SharedDateFormatSymbols&gt;::createObject(void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9B984E7</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnifiedCache::_get(icu_55::CacheKeyBase const&amp;, icu_55::SharedObject const*&amp;, void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717E57</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::get&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::CacheKey&lt;icu_55::SharedDateFormatSymbols&gt; const&amp;, void const*, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717C36</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::getByLocale&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::Locale const&amp;, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E6A1</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::createForLocale(icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970114E</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::construct(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x9703121</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::SimpleDateFormat(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x9b</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>488 bytes in 1 blocks are possibly lost in loss record 156 of 184</text>
+    <leakedbytes>488</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2AB80</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x9AE25D5</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UMemory::operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x9717B07</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::initField(icu_55::UnicodeString**, int&amp;, UResourceBundle const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970FC42</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::initializeData(icu_55::Locale const&amp;, char const*, UErrorCode&amp;, signed char)</fn>
+    </frame>
+    <frame>
+      <ip>0x97126DD</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::DateFormatSymbols(icu_55::Locale const&amp;, char const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E605</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::LocaleCacheKey&lt;icu_55::SharedDateFormatSymbols&gt;::createObject(void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9B984E7</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnifiedCache::_get(icu_55::CacheKeyBase const&amp;, icu_55::SharedObject const*&amp;, void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717E57</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::get&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::CacheKey&lt;icu_55::SharedDateFormatSymbols&gt; const&amp;, void const*, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717C36</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::getByLocale&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::Locale const&amp;, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E6A1</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::createForLocale(icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970114E</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::construct(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x9703121</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::SimpleDateFormat(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x9c</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>488 bytes in 1 blocks are possibly lost in loss record 157 of 184</text>
+    <leakedbytes>488</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2AB80</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x9AE25D5</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UMemory::operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x9717B07</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::initField(icu_55::UnicodeString**, int&amp;, UResourceBundle const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970FCE2</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::initializeData(icu_55::Locale const&amp;, char const*, UErrorCode&amp;, signed char)</fn>
+    </frame>
+    <frame>
+      <ip>0x97126DD</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::DateFormatSymbols(icu_55::Locale const&amp;, char const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E605</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::LocaleCacheKey&lt;icu_55::SharedDateFormatSymbols&gt;::createObject(void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9B984E7</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnifiedCache::_get(icu_55::CacheKeyBase const&amp;, icu_55::SharedObject const*&amp;, void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717E57</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::get&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::CacheKey&lt;icu_55::SharedDateFormatSymbols&gt; const&amp;, void const*, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717C36</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::getByLocale&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::Locale const&amp;, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E6A1</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::createForLocale(icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970114E</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::construct(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x9703121</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::SimpleDateFormat(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0x9d</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>488 bytes in 1 blocks are possibly lost in loss record 158 of 184</text>
+    <leakedbytes>488</leakedbytes>
+    <leakedblocks>1</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2AB80</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x9AE25D5</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UMemory::operator new[](unsigned long)</fn>
+    </frame>
+    <frame>
+      <ip>0x9717B07</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::initField(icu_55::UnicodeString**, int&amp;, UResourceBundle const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970FD82</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::initializeData(icu_55::Locale const&amp;, char const*, UErrorCode&amp;, signed char)</fn>
+    </frame>
+    <frame>
+      <ip>0x97126DD</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::DateFormatSymbols(icu_55::Locale const&amp;, char const*, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E605</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::LocaleCacheKey&lt;icu_55::SharedDateFormatSymbols&gt;::createObject(void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9B984E7</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnifiedCache::_get(icu_55::CacheKeyBase const&amp;, icu_55::SharedObject const*&amp;, void const*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717E57</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::get&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::CacheKey&lt;icu_55::SharedDateFormatSymbols&gt; const&amp;, void const*, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x9717C36</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>void icu_55::UnifiedCache::getByLocale&lt;icu_55::SharedDateFormatSymbols&gt;(icu_55::Locale const&amp;, icu_55::SharedDateFormatSymbols const*&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970E6A1</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormatSymbols::createForLocale(icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970114E</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::construct(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x9703121</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::SimpleDateFormat(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+  </stack>
+</error>
+
+<error>
+  <unique>0xb5</unique>
+  <tid>1</tid>
+  <kind>Leak_PossiblyLost</kind>
+  <xwhat>
+    <text>4,832 bytes in 15 blocks are possibly lost in loss record 182 of 184</text>
+    <leakedbytes>4832</leakedbytes>
+    <leakedblocks>15</leakedblocks>
+  </xwhat>
+  <stack>
+    <frame>
+      <ip>0x4C2AB80</ip>
+      <obj>/usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so</obj>
+      <fn>malloc</fn>
+    </frame>
+    <frame>
+      <ip>0x9B2D72C</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnicodeString::cloneArrayIfNeeded(int, int, signed char, int**, signed char)</fn>
+    </frame>
+    <frame>
+      <ip>0x9B2D0A1</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnicodeString::doReplace(int, int, unsigned short const*, int, int)</fn>
+    </frame>
+    <frame>
+      <ip>0x9B304D6</ip>
+      <obj>/usr/local/lib/libicuuc.so.55.1</obj>
+      <fn>icu_55::UnicodeStringAppendable::appendString(unsigned short const*, int)</fn>
+    </frame>
+    <frame>
+      <ip>0x96DDBDA</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::MessageFormat::format(int, void const*, icu_55::Formattable const*, icu_55::UnicodeString const*, int, icu_55::AppendableWrapper&amp;, icu_55::FieldPosition*, UErrorCode&amp;) const</fn>
+    </frame>
+    <frame>
+      <ip>0x96DD4C8</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::MessageFormat::format(icu_55::UnicodeString const&amp;, icu_55::Formattable const*, int, icu_55::UnicodeString&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x9701664</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::construct(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x9703121</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::SimpleDateFormat::SimpleDateFormat(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;, UErrorCode&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x970055F</ip>
+      <obj>/usr/local/lib/libicui18n.so.55.1</obj>
+      <fn>icu_55::DateFormat::create(icu_55::DateFormat::EStyle, icu_55::DateFormat::EStyle, icu_55::Locale const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x5CA8DA4</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_locale.so.1.59.0</obj>
+      <fn>boost::locale::impl_icu::icu_formatters_cache::icu_formatters_cache(icu_55::Locale const&amp;)</fn>
+    </frame>
+    <frame>
+      <ip>0x5C982BB</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_locale.so.1.59.0</obj>
+      <fn>boost::locale::impl_icu::create_formatting(std::locale const&amp;, boost::locale::impl_icu::cdata const&amp;, unsigned int)</fn>
+    </frame>
+    <frame>
+      <ip>0x5C96D36</ip>
+      <obj>/usr/lib/x86_64-linux-gnu/libboost_locale.so.1.59.0</obj>
+      <fn>boost::locale::impl_icu::icu_localization_backend::install(std::locale const&amp;, unsigned int, unsigned int)</fn>
+    </frame>
+  </stack>
+</error>
+
+<errorcounts>
+</errorcounts>
+
+<suppcounts>
+</suppcounts>
+
+</valgrindoutput>
+
