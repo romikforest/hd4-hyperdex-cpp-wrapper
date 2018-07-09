@@ -6,7 +6,7 @@ It was working when I had written it.
 
 It provides easy access to the hyperdex database (http://hyperdex.org/) from c++ code.
 You can use standard vectors, arrays, tuples and so on as data containers.
-Some extended type support added.
+Some extended type support was added.
 You can serialize any object using boost serialization library.
 Google macaroons was supported.
 
@@ -28,6 +28,6 @@ Other third party components must be downloaded separately.
 The project is not issued for compilation as a library, it has empty main.cpp file, where you can call tests.
 I'm sorry the code is not properly issued.
 
-Some test may not work as API has changed due the development.
+Some tests may not work as API has changed due the development.
 
 I have not tested this code with actual hyperdex API.
